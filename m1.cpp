@@ -19,6 +19,8 @@ int main()
 
     for(i=0;i<T;i++){
         string test = str[i];
+	
+
         int len = test.length();
         int cou=count(test.begin(),test.end(),'(');
 
@@ -31,8 +33,9 @@ int main()
             {
                 if(test.find("(())")!=-1){
                 int found = test.find("(())");
-                test.erase(found,found+4);
+                test.erase(found,found+3);
                 }
+
                 if(test.find("(()())")!=-1){
                 int found1 = test.find("(()())");
                 test.erase(found1,found1+6);
@@ -41,6 +44,7 @@ int main()
         if(test.empty()){
             cout<<"ATM\n";
         }
+	
         else{
             cout<<name<<endl;
         }
