@@ -31,7 +31,7 @@ int main()
             {
                 if(test.find("(())")!=-1){
                 int found = test.find("(())");
-                test.erase(found,found+4);
+                test.erase(found,found+3);
                 }
                 if(test.find("(()())")!=-1){
                 int found1 = test.find("(()())");
