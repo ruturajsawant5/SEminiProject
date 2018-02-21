@@ -1,6 +1,17 @@
+/*  *Program for string validator
+    *
+    *@author ruturaj
+    *@author Dnyaneshwar
+    *@author rajahamad
+    *@author apurv
+*/
 #include <iostream>
 #include<string>
+/* * string header file for .length() , .find() , .erase Functions
+*/
 #include<algorithm>
+/*  for count ffunction
+*/
 using namespace std;
 
 int main()
