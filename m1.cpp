@@ -27,7 +27,7 @@ int main()
     cout<<"Enter Strings one by one :"<<endl;
     for(i=0;i<T;i++)
         cin>>str[i];
-
+    //block to count length of sequence
     for(i=0;i<T;i++){
         string test = str[i];
         int len = test.length();
@@ -38,6 +38,7 @@ int main()
            cout<<name<<endl;
         }
         else{
+           //Block to identify valid string sequence
         while(test.find("(())")!=-1||test.find("(()())")!=-1)
             {
                 if(test.find("(())")!=-1){
@@ -49,6 +50,7 @@ int main()
                 test.erase(found1,found1+6);
                 }
             }
+           //block decides winner
         if(test.empty()){
             cout<<"ATM\n";
         }
@@ -59,4 +61,5 @@ int main()
     }
     return 0;
 }
+//end of main
 
