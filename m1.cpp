@@ -1,19 +1,8 @@
-/*  *Program for string validator
-    *
-    *@author ruturaj
-    *@author Dnyaneshwar
-    *@author rajahamad
-    *@author apurv
-*/
+
 #include <iostream>
 #include<string>
-/* * string header file for .length() , .find() , .erase Functions
-*/
-#include<algorithm>
-/*  for count ffunction
-*/
 using namespace std;
-
+int count(string);
 int main()
 {
     char name[20];
@@ -30,10 +19,10 @@ int main()
     //block to count length of sequence
     for(i=0;i<T;i++){
         string test = str[i];
-        int len = test.length();
-        int cou=count(test.begin(),test.end(),'(');
+      //  int len = test.length();
+        int cou=count(test);
 
-        if(cou!=(len-cou))
+        if(cou==0)
         {
            cout<<name<<endl;
         }
@@ -63,3 +52,21 @@ int main()
 }
 //end of main
 
+int count(string test)
+{
+    int  count_=0;
+    int length_ = test.length();
+    for(int i=0;i<length_;i++)
+    {
+        if(test[i]=='(')
+        count_++;
+    }
+    if(count_==length_-count_)
+    {
+        return 1;
+    }
+    else
+    {
+    return 0;
+    }
+}
